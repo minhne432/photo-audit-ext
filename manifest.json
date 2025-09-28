@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Photo Audit SC Helper",
+  "version": "1.0.0",
+  "description": "Tự động hoá form Photo Audit SC (hotkeys, focus, set giá trị).",
+  "permissions": [],
+  "host_permissions": ["*://*/*TradeProgramViewPhoto_SC.aspx*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*TradeProgramViewPhoto_SC.aspx*"],
+      "js": ["pa.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
